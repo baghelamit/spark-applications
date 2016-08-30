@@ -28,6 +28,8 @@ public class SparkCassandraDatasetApplication {
 						put("table", "userdata");
 					}
 				}).load().show();
+        
+        spark.stop();
 
 	}
 		
