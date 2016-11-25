@@ -2,7 +2,7 @@
 
 Sample application using Spark
 - Average Calculation using RDD
-- Spark 2.0 CSV Read/Write
+- Spark read/write CSV with dateFormat
 - GropupBy and Aggregate on Dataset
 - Dataset having Json string to Dataset having individual columns
 - MapWithPartition
