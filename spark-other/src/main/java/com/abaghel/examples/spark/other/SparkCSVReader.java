@@ -20,16 +20,16 @@ public class SparkCSVReader {
 				.config("spark.sql.warehouse.dir", "/file:C:/temp")
 				.master("local")
 				.getOrCreate();
-
+		//Read
 		Dataset<Row> ds = spark
 				.sqlContext()
 				.read()
-				.format("com.databricks.spark.csv")
+				.format("csv")
 				.option("header", "true")
 				.load("src/main/java/resources/test.csv");
 		
 		ds.show();
-		
+		//Write
 		ds.toDF().write()
 		.format("com.databricks.spark.csv")
 		.mode(SaveMode.Overwrite)
